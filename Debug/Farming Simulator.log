@@ -1,0 +1,5 @@
+﻿  FarmingSim.cpp
+C:\Users\Cerni_Nata\Documents\CPP projekte\Farming Simulator\FarmingSim.cpp(75,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\Cerni_Nata\Documents\CPP projekte\Farming Simulator\FarmingSim.cpp(95,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\Cerni_Nata\Documents\CPP projekte\Farming Simulator\FarmingSim.cpp(105,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  Farming Simulator.vcxproj -> C:\Users\Cerni_Nata\Documents\CPP projekte\Farming Simulator\Debug\Farming Simulator.exe
