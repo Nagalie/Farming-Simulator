@@ -1,4 +1,3 @@
-
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<iomanip>
@@ -7,11 +6,15 @@
 #include<windows.h>
 #include<thread>
 #include<string>
+#include "Header.h"
 using namespace std;
 
 
 void Intro()
 {
+
+	string sName, sFarmName;
+	FILE* Datastream;
 	Datastream = fopen("Spieldaten.dat", "r"); //Datei öffnet sich
 	if (Datastream == NULL) //Wenn Datei vorhanden ist dann kein intro
 	{

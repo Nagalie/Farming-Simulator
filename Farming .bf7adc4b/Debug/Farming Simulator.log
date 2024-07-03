@@ -1,0 +1,19 @@
+﻿  FarmingSim.cpp
+  Intro.cpp
+  Code wird generiert...
+C:\Farming-Simulator\Intro.cpp(15,2): error C2065: "Datastream": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(16,6): error C2065: "Datastream": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(18,3): error C2065: "Datastream": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(26,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Farming-Simulator\Intro.cpp(34,10): error C2065: "sName": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(38,11): error C2065: "sName": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(38,25): error C2065: "sName": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(38,36): error C2065: "Datastream": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(46,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Farming-Simulator\Intro.cpp(53,11): error C2065: "sName": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(56,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Farming-Simulator\Intro.cpp(64,10): error C2065: "sFarmName": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(66,11): error C2065: "sFarmName": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(66,29): error C2065: "sFarmName": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(66,44): error C2065: "Datastream": nichtdeklarierter Bezeichner
+C:\Farming-Simulator\Intro.cpp(69,9): error C2065: "Datastream": nichtdeklarierter Bezeichner

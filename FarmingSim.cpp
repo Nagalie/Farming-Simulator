@@ -8,9 +8,8 @@
 #include<string>
 using namespace std;
 
-string sName, sFarmName, strEingabe;
-//pointer auf file
-FILE* Datastream;
+string strEingabe;
+
 char cKaufen;
 int iMoney = 50;
 int HowMuchFarm = 1;
