@@ -12,7 +12,7 @@ string strEingabe;
 
 char cKaufen;
 int iMoney = 50;
-int HowMuchFarm = 1;
+int HowMuchFarm = 0;
 bool back = false;
 bool subback = false;
 
@@ -68,12 +68,15 @@ void Game()
 		cout << "Farmname: " << sFarmName;
 	}*/
 
+	thread first(machGeld);
+	first.detach();
+
 	do {
 		system("cls");
 
 		back = false;
 		updateMoneyNow = true;
-		cout << "Money: " << iMoney << "\tPress i for information\n" << endl << endl;
+		cout << "Money: " << iMoney << "\tPress i for information\n" << "Farmname\t" << "Name" << endl << endl;
 		cin >> cKaufen;
 
 		switch (cKaufen)
@@ -85,6 +88,7 @@ void Game()
 				system("cls");
 				cout << "Information:\n\n";
 				cout << "type \"exit\" to get back\n\n";
+				cout << "type \"s\" to see shop\n";
 
 				cin >> strEingabe;
 				if (strEingabe == "Exit" || strEingabe == "exit")
@@ -105,19 +109,30 @@ void Game()
 		break;
 		case '1':
 		{
-			if (iMoney == 30)
+			if (iMoney > 30+HowMuchFarm*5)
 			{
-				thread first(machGeld);
-				first.detach();
+				iMoney = iMoney - 30 - (HowMuchFarm * 5);
+				HowMuchFarm++;
 				back = true;
 			}
 			else
 			{
-				
+				cout << "Not enough Money (enter)";
+				back = true;
+				cin.get(); cin.get();
 			}
 		}
 		break;
-		default: {
+		case 's': 
+		{
+			system("cls");
+			cout << "Cost:";
+			cout << "\tField: " << 30 + HowMuchFarm * 5 << endl;
+			back = true;
+		}
+		break;
+		default: 
+		{
 			system("cls");
 			cout << "Money: " << iMoney << "\tPress i for information\n" << endl << endl;
 			cout << "no valid input (enter)";
@@ -157,15 +172,17 @@ void moveCursor(int x, int y)
 	SetConsoleCursorPosition(consoleHandle, cursorPosition);
 }
 
-void machGeld()
+void machGeld() //diese Funktion hat Bogi so genannt :,)
 {
 
-	iMoney -= 30;
-	HowMuchFarm =+ 1;
 	while(true) {
-		iMoney = iMoney + 2 * HowMuchFarm;
-		if (updateMoneyNow) {
-			updateMoney();
+		if (HowMuchFarm > 0)
+		{
+			iMoney = iMoney + 2 * HowMuchFarm;
+			if (updateMoneyNow)
+			{
+				updateMoney();
+			}
 		}
 		Sleep(2000);
 	}
@@ -174,3 +191,4 @@ void machGeld()
 
 //Pastelgrün farbe outputten
 //Threads hinbekommen und mehr darüber hrausfinden
+//How much farm hinzufügen
